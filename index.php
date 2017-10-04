@@ -60,109 +60,61 @@ findLeapYearforeach($year);
 findLeapYearwhile($year);
 function findLeapYearforeach($year)
 {
-echo "<br>9. Done with FOREACH function";
+echo "<br>9. Done with FOREACH function<br>";
 foreach($year as $value)
 {
 if(((int)$value)%4==0)
 {
-echo "<br>True";
+echo "$value True ,";
 }
 else
 {
-echo "<br>False";
+echo "$value False ,";
 }
-echo "<br>";
 }
 }
 
 function findLeapYearwhile($year)
 {
-echo "<br>10.Done with WHILE function";
+echo "<br><br>10.Done with WHILE function<br>";
 $i=0;
 while($i<count($year))
 
 {
 if(((int)$year[$i])%4==0)
 {
-echo "<br>True";
+echo "$year[$i] True ,";
 }
 else
 {
-echo "<br>False";
+echo "$year[$i] False ,";
 }
 ++$i;
 
-echo "<br>";
-}
-}
-echo "<br> 11. Done with SWITCH case";
-for ($i=0;$i<count($year);$i++)
-
-{echo "<br>";
-switch ($year{$i})
-{
-case "2012": if(((int)$year[$i])%4==0)
-{
-echo "<br>True";
-}
-else
-{
-echo "<br>False";
-}
-
-break;
-case "396": if(((int)$year[$i])%4==0)
-{
-echo "<br>True";
-}
-else
-{
-echo "<br>False";
-}
-
-break;
-case "300": if(((int)$year[$i])%4==0)
-{
-echo "<br>True";
-}
-else
-{
-echo "<br>False";
-}
-
-break;
-case "2000": if(((int)$year[$i])%4==0)
-{
-echo "<br>True";
-}
-else
-{
-echo "<br>False";
-}
-
-break;
-case "1089": if(((int)$year[$i])%4==0)
-{
-echo "<br>True";
-}
-else
-{
-echo "<br>False";
-}
-
-break;
-case "1100": if(((int)$year[$i])%4==0)
-{
-echo "<br>True";
-}
-else
-{
-echo "<br>False";
-}
-
-break;
+//echo "<br>";
 }
 }
 
+$tempoutput = "";
+echo "<br><br> 10. Printing the value using switch case<br>";
+foreach ($year as $value)
+        {
+            switch ($value)
+            {
+                case ($value%4 == 0):
+                    {
+                        $tempoutput .= "  $value True , ";
+                        break;
+                    }
+                case ($value%4 != 0):
+                    {
+                        $tempoutput .= "  $value False ,";
+                        break;
+                    }
+            }
+        }
+        echo " $tempoutput <br><br>";
+
+echo "End of the program";
 
 ?>
