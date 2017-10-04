@@ -2,12 +2,12 @@
 $date =  date('Y-m-d', time());
 $word = "hi it has been a high time that i see you";
 
-echo "The date is \$date: ".$date."<br>";
+echo "The value of \$date: ".$date."<br>";
 
 $tar = "2017/05/24";
-echo "The value is \$tar: ".$tar."<br>";
+echo "The value of \$tar: ".$tar."<br>";
 $year = array("2012", "396", "300","2000", "1100", "1089");
-echo "The value of year is \$year: ";
+echo "The value of  \$year: ";
 print_r($year);
 {
 echo "<br> <br>1. I have Replaced '-' with '/' in new date <br>";
